@@ -1,0 +1,14 @@
+.card-text, .card-title, .btn {
+    display: grid;
+    justify-content: center;
+}
+
+.room{
+    display: grid-row;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.room-image{
+    width: 40vw;
+}
