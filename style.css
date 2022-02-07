@@ -1,14 +1,33 @@
-.card-text, .card-title, .btn {
+.wrapper{
     display: grid;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-gap: 0.5em;
+
 }
 
-.room{
-    display: grid-row;
-    justify-content: center;
-    flex-direction: column;
-    
+.wrapper> *{
+    background-color: darkgray;
+    color: white;
+    padding: 2em;
+    border-radius: 0.5em;
 }
-.room-image{
-    width: 40vw;
+
+.header{
+    grid-area: header;
+    grid-column: span 3;
+}
+
+.main{
+    grid-area: main;
+    grid-column: span 3;
+}
+
+.footer{
+    grid-area: footer;
+    grid-column: span 3;
 }
