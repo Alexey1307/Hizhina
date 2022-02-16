@@ -57,7 +57,7 @@ a {
 	justify-items: end;
 }
 
-a:hover {
+a:hover, .bookingButton:hover{
 	color: #0474BC;
 }
 
@@ -139,4 +139,70 @@ a:hover {
 .menu-btn.active span:nth-of-type(3) {
 	transform: translateY(-10px) rotate(-45deg);
 	margin: 0;
+}
+
+/* =======================
+******* Main ******
+========================*/
+
+/* =======================
+******* Booking ******
+========================*/
+
+.booking{
+	display: grid;
+	text-align: center;
+	background-color: #1f1d2b;
+}
+
+.bookingDescription{
+	color:white;font-size: 1.2em;
+	line-height: 2em;
+}
+
+.bookingButton{
+	display: grid;
+	justify-self: center;
+	background-color: orange;
+	padding: 1em;
+	margin-bottom: 2em;
+	font-size: 1.2em;
+	border-radius: 1em;
+
+}
+
+/* =======================
+******* Rooms ******
+========================*/
+
+.imageRoom{
+	display: grid;
+	margin: 2em;
+
+}
+
+.photoRoom{
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media (min-width: 780px){
+	.photoRoom{
+		width: 50%;
+	}
+}
+
+.roomsDescription{
+	text-align: center;
+	/* color: yellow; */
+	font-size: 2em;
+}
+
+span{
+	/* font-size: 2em; */
+	background-color: black;
+	color: yellow;
+	border: #000000 solid 2px;
+	border-radius: 0.5em;
+	padding: 0.2em;
 }
