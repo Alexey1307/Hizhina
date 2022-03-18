@@ -1,0 +1,268 @@
+body {
+	margin: 0;
+	background-color: #E9EBEE;
+}
+
+/* =======================
+******* Main Menu ******
+========================*/
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	min-height: 100px;
+	background-color: #FCFCFC;
+	padding: 0 40px;
+	-webkit-box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
+	-moz-box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
+	box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
+}
+
+.navbar .leftSide{
+	display: grid;
+	grid-auto-flow: column;
+	align-content: center;
+}
+
+.navbar .rightSide{
+	display: grid;
+	grid-auto-flow: column;
+	align-content: center;
+}
+
+.logo {
+	display: grid;
+	justify-content: start;
+	align-content: center;
+	font-family: "Open Sans", sans-serif;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.mainMenu {
+	display: grid;
+	justify-content: right;
+	align-content: center;
+	grid-auto-flow: column;
+	grid-gap: 1.5em;
+	font-family: "Open Sans", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #333333;
+	justify-items: end;
+}
+
+a:hover, .bookingButton:hover{
+	color: #0474BC;
+	top: 20px;
+	box-shadow: 0 3px 0 #3c354a;
+	cursor: pointer;
+}
+
+
+/* =======================
+******* Mobile Menu ******
+========================*/
+
+.menu-btn {
+	display: grid;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index: 2;
+}
+
+.menu-btn span {
+	display: block;
+	width: 30px;
+	height: 2px;
+	background-color: #222222;
+	transition: all 0.5s;
+}
+
+.menu-btn span:first-child {
+	margin-top: -2px;
+}
+
+.menu-btn span:last-child {
+	margin-bottom: -2px;
+}
+
+
+@media (min-width: 780px) {
+	.menu-btn{
+		display: none!important;
+	}
+	.menu-btn span {
+		transform: translate(50px);
+	}
+}
+@media (max-width: 780px) {
+	.mainMenu {
+		display: none;
+	}
+}
+
+/* Меню, которое будет появляться */
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	background: #D4BAFF;
+	transform: translateX(-100%);
+	transition: transform 0.5s;
+}
+
+.menu.active {
+	transform: translateX(0);
+}
+
+.menu li {
+	list-style-type: none;
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.menu-btn.active span:nth-of-type(1) {
+	transform:  translateY(10px) rotate(45deg);
+	margin: 0;
+}
+
+.menu-btn.active span:nth-of-type(3) {
+	transform: translateY(-10px) rotate(-45deg);
+	margin: 0;
+}
+
+/* =======================
+******* Main ******
+========================*/
+
+/* =======================
+******* Booking ******
+========================*/
+
+.booking{
+	display: grid;
+	text-align: center;
+	background-color: #1f1d2b;
+}
+
+.bookingDescription{
+	color:white;font-size: 1.2em;
+	line-height: 2em;
+}
+
+.bookingButton{
+	display: grid;
+	justify-self: center;
+	background-color: orange;
+	padding: 1em;
+	margin-bottom: 2em;
+	font-size: 1.2em;
+	border-radius: 1em;
+	box-shadow: 0 5px 0 #3c354a;
+	transition-duration: 1s;
+
+}
+
+
+/* =======================
+******* Rooms ******
+========================*/
+
+.imageRoom{
+	display: grid;
+	margin: 2em;
+
+}
+
+.photoRoom{
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media (min-width: 780px){
+	.photoRoom{
+		width: 50%;
+	}
+}
+
+.roomsDescription{
+	text-align: center;
+	/* color: yellow; */
+	font-size: 2em;
+}
+
+span{
+	/* font-size: 2em; */
+	background-color: black;
+	color: yellow;
+	border: #000000 solid 2px;
+	border-radius: 0.5em;
+	padding: 0.2em;
+}
+
+/* =======================
+******* Calendar ******
+========================*/
+
+
+.calendar{
+	display: grid;
+	background-color: yellow;
+	color: blue;
+	border: solid 2px blue;
+	border-radius: 10px;
+	grid-template-columns: repeat(2, 1fr);
+	row-gap: 10px;
+	text-align: center;
+	margin: auto;
+}
+
+.item{
+	display: grid;
+	/* border: solid 1px black; */
+	justify-content: center;
+	align-content: center;
+	justify-self: center;
+}
+
+.button{
+	display: grid;
+	grid-column: 1/3;
+	justify-self: center;
+	background-color: blue;
+	color: #D4BAFF;
+	margin-bottom: 1em;
+	font-size: 1.2em;
+	border-radius: 10px;
+	transition-duration: 1s
+}
+
+.button:hover{
+	color: white;
+	top: 20px;
+	box-shadow: 0 3px 0 #3c354a;
+	cursor: pointer;
+}
+
+@media (min-width: 780px) {
+	.calendar {
+		width: 50%;
+	}
+}
+
+output{
+	background-color: #fff;
+}
