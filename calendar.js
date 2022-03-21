@@ -1,35 +1,48 @@
-function getNumberOfDays(start, end){
-    const date1 = new Date(start);
-    const date2 = new Date(end);
+// Выводим выбранные даты
+document.querySelector('.button').onclick = function(){
+    let dateStart = document.querySelector('.start_date').value;
+    let dateEnd = document.querySelector('.end_date').value;
+    dateStart =Date.parse(dateStart);
+    dateEnd =Date.parse(dateEnd);
 
-//One day in milliseconds
-    const oneDay = 24 * 60 * 60 * 1000;
+    let out = document.querySelector('.out');
+    let out_2 = document.querySelector('.out_2');
 
-// Calculating the time difference between two dates
-    const diffInTime = date1.getTime() - date2.getTime();
+    let count = 0;
+    for(let i = dateStart; i <= dateEnd; i = i + 24*60*60*1000){
+        out.innerHTML += new Date(i).toISOString().substring(0, 10) + 
+        '<br>';
+        count ++;
+        out_2.innerHTML = count;
+        console.log(count);
+        }
+    };
 
-// Calculating the numbers of days between two dates
-    const diffInDays = Math.round(diffInTime / oneDay);
+// let count = 0;
 
-    return diffInDays;
-}
+// for (let i = 0; i < 27; i++) {
+//     // console.log(i);
+//     count++;
+// }
 
-console.log(getNumberOfDays("1 / 2 / 2021", "3 / 1 / 2021"));
+// console.log(count);
 
-// let firstDate = document.querySelector('.date_1');
-// let secondtDate = document.querySelector('.date_2');
-// firstDate.addEventListener('click', function(){
-//     console.log(firstDate);
-// });
 
-let now = new Date();
-let year = now.getFullYear();
-console.log(year);
 
-let month = now.getMonth();
-console.log(month);
 
-let day = now.getDate();
-console.log(day);
+// function calc () {
+//     let dateStart = document.querySelector('.start_date').value;
+//     let dateEnd = document.querySelector('.end_date').value;
+//     // dateStart = Date.parse(dateStart);
+//     // dateEnd =Date.parse(dateEnd);
+//     const oneDay = 24 * 60 * 60 * 1000;
+//     // Calculating the time difference between two dates
+//     let a = dateStart.getTime();
+//     let b = dateEnd.getTime()
+//     const diffInTime = a - b;
+//     // Calculating the numbers of days between two dates
+//     const diffInDays = Math.round(diffInTime / oneDay);
+//     let out = document.querySelector('.out');
+//     return diffInDays;
 
-console.log(now);
+// }
