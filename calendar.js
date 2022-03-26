@@ -14,8 +14,7 @@ document.querySelector('.button').addEventListener('click', function(){
         // out.innerHTML = new Date(i).toISOString().substring(0, 10) + '<br>';
         let arr = [new Date(i).toISOString().substring(0, 10)];
         out.innerHTML += arr;
-        let arr_2 = [arr[0], arr[1]];
-        console.log(arr_2); //Почему ты лять не выводишь 1 элемент???
+        console.log(arr[0]); //Почему ты лять не выводишь 1 элемент???
         count ++;
         let trueCount = count -1;
         out_2.innerHTML = trueCount;
