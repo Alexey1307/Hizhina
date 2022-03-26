@@ -12,10 +12,10 @@ document.querySelector('.button').addEventListener('click', function(){
     let count = 0;
     for(let i = dateStart; i <= dateEnd; i = i + 24*60*60*1000){
         // out.innerHTML = new Date(i).toISOString().substring(0, 10) + '<br>';
-        let arg = [new Date(i).toISOString().substring(0, 10)];
-        arg = [...arg];
-        out.innerHTML += arg;
-        console.log(arg[0]); //Почему ты лять не выводишь 1 элемент???
+        let arr = [new Date(i).toISOString().substring(0, 10)];
+        out.innerHTML += arr;
+        let arr_2 = [arr[0], arr[1]];
+        console.log(arr_2); //Почему ты лять не выводишь 1 элемент???
         count ++;
         let trueCount = count -1;
         out_2.innerHTML = trueCount;
