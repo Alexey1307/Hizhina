@@ -1,5 +1,5 @@
 // Выводим выбранные даты
-document.querySelector('.button').onclick = function(){
+document.querySelector('.button').addEventListener('click', function(){
     let dateStart = document.querySelector('.start_date').value;
     let dateEnd = document.querySelector('.end_date').value;
     dateStart =Date.parse(dateStart);
@@ -11,13 +11,14 @@ document.querySelector('.button').onclick = function(){
 
     let count = 0;
     for(let i = dateStart; i <= dateEnd; i = i + 24*60*60*1000){
+        // out.innerHTML = new Date(i).toISOString().substring(0, 10) + '<br>';
         let arg = [new Date(i).toISOString().substring(0, 10)];
+        arg = [...arg];
         out.innerHTML += arg;
         console.log(arg[0]); //Почему ты лять не выводишь 1 элемент???
-        // out.innerHTML = new Date(i).toISOString().substring(0, 10) + '<br>';
         count ++;
         let trueCount = count -1;
         out_2.innerHTML = trueCount;
         out_3.innerHTML = trueCount * 2000 + "р";
         }
-    };
+    });

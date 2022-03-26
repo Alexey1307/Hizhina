@@ -262,6 +262,24 @@ span{
 	}
 }
 
-output{
-	background-color: #fff;
+.out, .out_2, .out_3{
+	color: #000000;
 }
+
+/* Делаем активный весь input[date], отклик не только по иконке */
+.start_date, .end_date {
+   position: relative;
+   display: inline-block;
+}
+input::-webkit-calendar-picker-indicator {
+   opacity: 0;
+   position: absolute;
+   display: block;
+   left: 0;
+   top: 0;
+   width: 100%;
+   padding-right: 0;
+   padding-left: 0;
+   margin: 0;
+}
+/* ______________________________________________________________ */
