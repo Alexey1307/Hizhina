@@ -10,14 +10,20 @@ document.querySelector('.button').addEventListener('click', function(){
     let out_3 = document.querySelector('.out_3');
 
     let count = 0;
-    for(let i = dateStart; i <= dateEnd; i = i + 24*60*60*1000){
-        // out.innerHTML = new Date(i).toISOString().substring(0, 10) + '<br>';
+
+    const startDateRender = new Date(dateStart).toISOString().substring(0, 10);
+    const endDateRender = new Date(dateEnd).toISOString().substring(0, 10);
+
+    out.innerHTML = new Date(startDateRender).toISOString().substring(0, 10) + ' - ' +
+        new Date(endDateRender).toISOString().substring(0, 10);
+    // out_2.innerHTML = new Date(endDateRender).toISOString().substring(0,10);
+
+
+    for (let i = dateStart; i <= dateEnd; i = i + 24 * 60 * 60 * 1000) {
         let arr = [new Date(i).toISOString().substring(0, 10)];
-        out.innerHTML += arr;
-        console.log(arr[0]); //Почему ты лять не выводишь 1 элемент???
-        count ++;
-        let trueCount = count -1;
-        out_2.innerHTML = trueCount;
+        count++;
+        let trueCount = count - 1;
+        out_2.innerHTML = `${trueCount}`;
         out_3.innerHTML = trueCount * 2000 + "р";
-        }
+    }
     });
