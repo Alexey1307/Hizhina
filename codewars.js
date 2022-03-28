@@ -1,28 +1,7 @@
-let arr = [1,2,3,4,6,6,7,8];
-// function firstNonConsecutive(arr) {
-//   for(let i in arr){
-//     if (i!=i+10) {
-//       console.log(i)
-//     }
-//     else{
-//       return null;
-//     }
-//   }
-// }
-
-
-
-
-function firstNonConsecutive(arr){
-  for (let i =  0; i <= arr.length; i++) {
-      let arr_2 = arr[i] +1;
-      if (arr_2) {
-        console.log(arr_2);
-      }
-      
-    }
-  }
-firstNonConsecutive(arr);
+let arr = [1,2,3,4,6,8];
+найди все четные и нечетные числа и потом напиши условие,
+что если четно - нечетное больше 1 - breack и return это число. или без breck
+попробуй и так и так.
 
 
 // If the whole array is consecutive then return null.

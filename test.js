@@ -1,5 +1,20 @@
-let arr = [1, 2, 5];
-    console.log(`${arr[0]} - ${arr[arr.length-1]}`);
+// Выводим выбранные даты
+document.querySelector('.button').addEventListener('click', function(){
+    let dateStart = document.querySelector('.start_date').value;
+    let dateEnd = document.querySelector('.end_date').value;
+    dateStart =Date.parse(dateStart);
+    dateEnd =Date.parse(dateEnd);
 
+    let out = document.querySelector('.out');
+    let out_2 = document.querySelector('.out_2');
+    let out_3 = document.querySelector('.out_3');
 
-//попробуй с помощью методов get получить массив объедени join и выведи 1й и последний эдемент.
+    let count = 0;
+    for(let i = dateStart; i <= dateEnd; i = i + 24*60*60*1000){
+        let arr = [new Date(i).toISOString().substring(0, 10)];
+        count ++;
+        let trueCount = count -1;
+        out_2.innerHTML = trueCount;
+        out_3.innerHTML = trueCount * 2000 + "р";
+        }
+    });
