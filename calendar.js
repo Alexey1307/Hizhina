@@ -15,7 +15,10 @@ document.querySelector('.button').addEventListener('click', function(){
 
     const startDateRender = new Date(dateStart).toLocaleDateString().substring(0, 10);
     const endDateRender = new Date(dateEnd).toLocaleDateString().substring(0, 10);
-    out.innerHTML = startDateRender + ' - ' + endDateRender; //Выводим выбранные даты
+
+    if (startDateRender && endDateRender != 'Invalid Da') {
+        out.innerHTML = startDateRender + ' - ' + endDateRender; //Выводим выбранные даты
+    }
 
     for (let i = dateStart; i <= dateEnd; i = i + 24 * 60 * 60 * 1000) {
         count++;
