@@ -3,10 +3,21 @@ body {
 	background-color: #E9EBEE;
 }
 
-/* =======================
-******* Main Menu ******
-========================*/
+.container{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	row-gap: 10px;
+	text-align: center;
+	margin: auto;
+}
 
+header{
+	grid-column: 1/3;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -148,6 +159,7 @@ a {
 
 .booking{
 	display: grid;
+	grid-column: 1/3;
 	text-align: center;
 	background-color: #1f1d2b;
 	margin-bottom: 20px;
@@ -164,7 +176,9 @@ a {
 /* =======================
 ******* Rooms ******
 ========================*/
-
+.rooms{
+	grid-column: 1/3;
+}
 .imageRoom{
 	display: grid;
 	margin: 2em;
@@ -201,7 +215,9 @@ span{
 ******* Calendar ******
 ========================*/
 
-
+.calendarWrapper{
+	grid-column: 1/3;
+}
 .calendar{
 	display: grid;
 	background-color: #febb02;
@@ -267,3 +283,27 @@ input::-webkit-calendar-picker-indicator {
    margin: 0;
 }
 /* ______________________________________________________________ */
+.footer{
+	grid-column: 1/3;
+}
+
+ #gallery{
+	grid-column: 1/3;
+    width: 640px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#gallery .photos img{
+	display: grid;
+    width: 100%;
+    display: none;
+}
+
+#gallery .photos img:first-child{
+    display: block;
+}
+
+.buttons {
+    margin-top: 20px;
+} 
