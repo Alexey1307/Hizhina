@@ -296,7 +296,7 @@ input::-webkit-calendar-picker-indicator {
 
 #gallery .photos img{
 	display: grid;
-    width: 100%;
+    width: 50%;
     display: none;
 }
 
