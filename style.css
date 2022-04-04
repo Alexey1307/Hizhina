@@ -12,7 +12,6 @@ body {
 }
 
 header{
-	grid-column: 1/3;
 	position: sticky;
 	top: 0;
 	left: 0;
@@ -55,8 +54,6 @@ header{
 
 .mainMenu {
 	display: grid;
-	justify-content: right;
-	align-content: center;
 	grid-auto-flow: column;
 	grid-gap: 1.5em;
 	font-family: "Open Sans", sans-serif;
@@ -68,86 +65,24 @@ a {
 	justify-items: end;
 }
 
-
-
-/* =======================
-******* Mobile Menu ******
-========================*/
-
-.menu-btn {
-	display: grid;
-	width: 30px;
-	height: 30px;
-	position: relative;
-	z-index: 2;
-}
-
-.menu-btn span {
-	display: block;
-	width: 30px;
-	height: 2px;
-	background-color: #222222;
-	transition: all 0.5s;
-}
-
-.menu-btn span:first-child {
-	margin-top: -2px;
-}
-
-.menu-btn span:last-child {
-	margin-bottom: -2px;
-}
-
-
-@media (min-width: 780px) {
-	.menu-btn{
-		display: none!important;
-	}
-	.menu-btn span {
-		transform: translate(50px);
-	}
-}
 @media (max-width: 780px) {
-	.mainMenu {
-		display: none;
+	.navbar{
+		flex-direction: column;
+		padding-top: 20px;
 	}
-}
+	.mainMenu{
+		display: flex;
+		flex-direction: column;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+	.logo{
+		display: flex;
+		justify-content: center;
+	}
 
-/* Меню, которое будет появляться */
-.menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	padding: 15px;
-	background: #D4BAFF;
-	transform: translateX(-100%);
-	transition: transform 0.5s;
-}
-
-.menu.active {
-	transform: translateX(0);
-}
-
-.menu li {
-	list-style-type: none;
-}
-
-/* Меняем гамбургер иконку, когда меню открыто */
-.menu-btn.active span:nth-of-type(2) {
-	opacity: 0;
-}
-
-.menu-btn.active span:nth-of-type(1) {
-	transform:  translateY(10px) rotate(45deg);
-	margin: 0;
-}
-
-.menu-btn.active span:nth-of-type(3) {
-	transform: translateY(-10px) rotate(-45deg);
-	margin: 0;
-}
+}	
 
 /* =======================
 ******* Booking ******
