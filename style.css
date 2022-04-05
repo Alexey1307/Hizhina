@@ -5,13 +5,13 @@ body {
 
 .container{
 	display: grid;
-	/* grid-template-columns: repeat(2, 1fr); */
 	row-gap: 10px;
 	text-align: center;
 	margin: auto;
 }
 
 header{
+	grid-column: 1/3;
 	position: sticky;
 	top: 0;
 	left: 0;
@@ -67,6 +67,7 @@ a {
 
 @media (max-width: 780px) {
 	header{
+		grid-column: 1/3;
 		position: static;
 	}
 	.navbar{
@@ -107,17 +108,19 @@ a {
 /* =======================
 ******* Rooms ******
 ========================*/
-.some{
+.roomsWrapper{
+	grid-column: 1/3;
+}
+
+.rooms{
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	margin-left: 50px;;
 }
 
 .roomsDescription{
-	/* grid-column: 1/2; */
-	grid-template-columns: 1fr;
-	text-align: center;
-	font-size: 2em;
+	font-size: 1.5em;
+	align-self: center;
+	padding: 5px;
 }
 
 .price{
@@ -125,20 +128,26 @@ a {
 	color: yellow;
 	border: #000000 solid 2px;
 	border-radius: 0.5em;
+	margin-top: 10px;
 	padding: 0.2em;
 }
 
-
-
-.photoRoom{
-	width: 20%;
-	/* margin: 0 auto; */
+.gallery {
+	margin: 20px auto;
 }
 
-@media (min-width: 780px){
-	.photoRoom{
-		width: 50%;
-	}
+.gallery .photos img {
+	display: grid;
+	width: 100%;
+	display: none;
+}
+
+.gallery .photos img:first-child {
+	display: block;
+}
+
+.buttons {
+	margin-top: 20px;
 }
 
 /* =======================
@@ -216,24 +225,3 @@ input::-webkit-calendar-picker-indicator {
 .footer{
 	grid-column: 1/3;
 }
-
- #gallery{
-	grid-column: 1/3;
-    width: 640px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-#gallery .photos img{
-	display: grid;
-    width: 50%;
-    display: none;
-}
-
-#gallery .photos img:first-child{
-    display: block;
-}
-
-.buttons {
-    margin-top: 20px;
-} 

@@ -29,9 +29,9 @@ document.querySelector('.button').addEventListener('click', function () {
 });
 
 //Карусель.
-let btn_prev = document.querySelector('#gallery .buttons .prev');
-let btn_next = document.querySelector('#gallery .buttons .next');
-let images = document.querySelectorAll('#gallery .photos img');
+let btn_prev = document.querySelector('.gallery .buttons .prev');
+let btn_next = document.querySelector('.gallery .buttons .next');
+let images = document.querySelectorAll('.gallery .photos img');
 
 let i = 0;
 
