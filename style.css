@@ -143,6 +143,12 @@ a {
 	display: none;
 }
 
+@media (min-width: 780px){
+	.gallery .photos img {
+		width: 70%;
+	}
+}
+
 .gallery .photos img:first-child {
 	display: block;
 }
@@ -150,6 +156,7 @@ a {
 .buttons {
 	margin-top: 20px;
 }
+
 
 /* =======================
 ******* Calendar ******
