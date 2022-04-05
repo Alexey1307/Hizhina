@@ -52,3 +52,7 @@ btn_prev.onclick = function () {
 	}
 	images[i].style.display = 'block';
 }
+
+// slick slider
+$('.fade').slick();
+
