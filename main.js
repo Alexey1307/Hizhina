@@ -54,5 +54,13 @@ btn_prev.onclick = function () {
 }
 
 // slick slider
-$('.fade').slick();
+$(document).ready(function () {
+	$('.fade').slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear'
+	});
+});
 
