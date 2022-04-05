@@ -66,6 +66,9 @@ a {
 }
 
 @media (max-width: 780px) {
+	header{
+		position: static;
+	}
 	.navbar{
 		flex-direction: column;
 		padding-top: 20px;
