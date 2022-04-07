@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hizhina</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="slick.css">
-    <link rel="stylesheet" href="slick-theme.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+ 
 </head>
 <body>
 <div class="container">
@@ -73,67 +73,83 @@
                 <div class="roomsDescription">
                     наши номера
                 </div>
-                <div class="gallery">
-                    <div class="photos">
-                        <img src="images/room.jpg">
-                        <img src="images/room2.jpg">
-                        <img src="images/room3.jpg">
-                        <img src="images/kitchen.jpg">
-                        <img src="images/kitchen2.jpg">
+                <div class="swiper">>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/images/room.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/room2.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/room3.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/kitchen.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/kitchen2.jpg" alt="интернета немамана"></div>
                     </div>
-                    <div class="buttons">
-                        <button class="prev">&#8656;</button>
-                        <button class="next">&#8658;</button>
-                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
         </div>
+
         <div class="roomsWrapper">
             <div class="rooms">
                 <div class="roomsDescription">
                     наш дворик
                 </div>
-                <div class="gallery">
-                    <div class="photos">
-                        <img src="images/house.jpg">
-                        <img src="images/yard.jpg">
-                        <img src="images/yard2.jpg">
-                        <img src="images/yard3.jpg">
-                        <img src="images/room4.jpg">
+                <div class="swiper">>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/images/house.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/yard.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/yard2.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/yard3.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/room4.jpg" alt="интернета немамана"></div>
                     </div>
-                    <div class="buttons">
-                        <button class="prev">&#8656;</button>
-                        <button class="next">&#8658;</button>
-                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+        
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+        
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
         </div>
+
         <div class="roomsWrapper">
             <div class="rooms">
                 <div class="roomsDescription">
                     адыгея
                 </div>
-                <div class="gallery">
-                    <div class="photos">
-                        <img src="images/adygea.jpg">
-                        <img src="images/adygea2.jpg">
-                        <img src="images/adygea3.jpg">
-                        <img src="images/adygea4.jpg">
-                        <img src="images/adygea5.jpg">
-                        <img src="images/adygea6.jpg">
-                        <img src="images/adygea7.jpg">
-                        <img src="images/adygea8.jpg">
-                        <img src="images/adygea9.jpg">
-  
+                <div class="swiper">>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/images/adygea.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/adygea2.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/adygea3.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/adygea4.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/adygea5.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/adygea6.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/adygea7.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/adygea8.jpg" alt="интернета немамана"></div>
+                        <div class="swiper-slide"><img src="/images/adygea9.jpg" alt="интернета немамана"></div>
                     </div>
-                    <div class="buttons">
-                        <button class="prev">&#8656;</button>
-                        <button class="next">&#8658;</button>
-                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+        
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+        
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
         </div>
-
+        
     <footer class="footer">
         <p class="address">
             Адыгея, Каменномостский, Речная 10 <br>
@@ -144,9 +160,12 @@
         </p>
     </footer>
 
+</div>
 
-    <script src="jquery-3.6.0.min.js"></script>
-    <script src="slick.min.js"></script>
+
+    <!-- <script src="jquery-3.6.0.min.js"></script>
+    <script src="slick.min.js"></script> -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
