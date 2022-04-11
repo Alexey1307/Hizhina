@@ -1,13 +1,3 @@
-/*Обнуление*/
-*,
-*:before,
-*:after {
-	padding: 0;
-	/* margin: 0; */
-	border: 0;
-	box-sizing: border-box;
-}
-
 body {
 	background-color: #E9EBEE;
 }
@@ -114,17 +104,18 @@ a {
 	line-height: 2em;
 }
 
+.price {
+	grid-column: 1/3;
+	background-color: black;
+	color: yellow;
+	border-radius: 0.5em;
+	margin: auto;
+	padding: 0.2em;
+}
+
 /* =======================
 ******* Rooms ******
 ========================*/
-.roomsWrapper{
-	grid-column: 1/3;
-}
-
-.rooms{
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-}
 
 .roomsDescription{
 	font-size: 1.5em;
@@ -132,40 +123,23 @@ a {
 	padding: 5px;
 }
 
-.price{
+.swiper{
 	grid-column: 1/3;
-	background-color: black;
-	color: yellow;
-	border: #000000 solid 2px;
-	border-radius: 0.5em;
-	margin: auto;
-	padding: 0.2em;
-}
-
-.gallery {
-	margin: 20px auto;
-}
-
-.gallery .photos img {
-	display: grid;
 	width: 100%;
-	display: none;
+	height: 100%;
+		
 }
 
-@media (min-width: 780px){
-	.gallery .photos img {
-		width: 70%;
+
+@media (max-width: 560px) {
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		opacity: 0;
+		cursor: auto;
+		pointer-events: none;
 	}
 }
-
-.gallery .photos img:first-child {
-	display: block;
-}
-
-.buttons {
-	margin-top: 20px;
-}
-
 
 /* =======================
 ******* Calendar ******
@@ -253,7 +227,3 @@ input::-webkit-calendar-picker-indicator {
 ******* Slider ******
 ========================*/
 
-.swiper {
-  width: 600px;
-  height: 300px;
-}
