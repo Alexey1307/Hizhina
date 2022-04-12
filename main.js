@@ -51,3 +51,20 @@ const swiper = new Swiper('.swiper', {
 	},
 	
 });
+
+//scrolling
+// calendar
+let calendarElement = document.querySelector(".calendar");
+let btnCalendar = document.querySelector('.linksCalendar');
+	function bookingClick() {
+		calendarElement.scrollIntoView({ block: "center", behavior: "smooth" });
+	}
+btnCalendar.addEventListener('click', bookingClick);
+
+// rooms
+let roomsElement = document.querySelector(".roomsDescription");
+let btnRooms = document.querySelector('.linksRooms');
+	function roomsClick() {
+		roomsElement.scrollIntoView({ block: "center", behavior: "smooth" });
+	}
+btnRooms.addEventListener('click', roomsClick);
