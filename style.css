@@ -114,7 +114,7 @@ a {
 }
 
 /* =======================
-******* Rooms ******
+******* Slider ******
 ========================*/
 
 .roomsDescription{
@@ -225,7 +225,6 @@ input::-webkit-calendar-picker-indicator {
 	color: blueviolet;
 }
 
-/* =======================
-******* Slider ******
-========================*/
-
+.scroll{
+	scroll-behavior: smooth;
+}
