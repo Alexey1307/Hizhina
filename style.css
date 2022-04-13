@@ -223,9 +223,15 @@ input::-webkit-calendar-picker-indicator {
 .footer{
 	grid-column: 1/3;
 	color: orange;
-	background-color: rgb(13, 13, 13);
+	background-color: #383838;
+	border-radius: 5px;
 }
 
 .phone a{
-	color: blueviolet;
+	color: rgb(198, 192, 204);
+	text-decoration: none;
+}
+
+.telegram{
+	width: 1.5em;
 }
