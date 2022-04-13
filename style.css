@@ -2,20 +2,21 @@ body {
 	background-color: #E9EBEE;
 }
 
-.container{
+.container {
 	display: grid;
 	row-gap: 10px;
 	text-align: center;
 	margin: auto;
 }
 
-header{
+header {
 	grid-column: 1/3;
 	/* position: sticky; */
 	top: 0;
 	left: 0;
 	z-index: 1;
 }
+
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -27,13 +28,13 @@ header{
 	box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
 }
 
-.navbar .leftSide{
+.navbar .leftSide {
 	display: grid;
 	grid-auto-flow: column;
 	align-content: center;
 }
 
-.navbar .rightSide{
+.navbar .rightSide {
 	display: grid;
 	grid-auto-flow: column;
 	align-content: center;
@@ -58,45 +59,48 @@ header{
 	font-family: "Open Sans", sans-serif;
 }
 
-.mainMenu button{
+.mainMenu button {
 	border: 0;
 	background-color: #FCFCFC;
 	font-size: 1em;
 }
 
-.mainMenu button:hover{
-		color: orange;
-		cursor: pointer;
+.mainMenu button:hover {
+	color: orange;
+	cursor: pointer;
 }
 
 @media (max-width: 780px) {
-	header{
+	header {
 		grid-column: 1/3;
 		position: static;
 	}
-	.navbar{
+
+	.navbar {
 		flex-direction: column;
 		padding-top: 20px;
 	}
-	.mainMenu{
+
+	.mainMenu {
 		display: flex;
 		flex-direction: column;
 		padding-top: 20px;
 		padding-bottom: 20px;
 		text-align: center;
 	}
-	.logo{
+
+	.logo {
 		display: flex;
 		justify-content: center;
 	}
 
-}	
+}
 
 /* =======================
 ******* Booking ******
 ========================*/
 
-.booking{
+.booking {
 	display: grid;
 	grid-column: 1/3;
 	text-align: center;
@@ -104,8 +108,9 @@ header{
 	margin-bottom: 20px;
 }
 
-.bookingDescription{
-	color:white;font-size: 1.2em;
+.bookingDescription {
+	color: white;
+	font-size: 1.2em;
 	line-height: 2em;
 }
 
@@ -122,7 +127,7 @@ header{
 ******* Slider ******
 ========================*/
 
-.roomsDescription{
+.roomsDescription {
 	grid-column: 1/3;
 	font-size: 1.5em;
 	align-self: center;
@@ -130,11 +135,11 @@ header{
 	color: violet;
 }
 
-.swiper{
+.swiper {
 	grid-column: 1/3;
 	width: 100%;
 	height: 100%;
-		
+
 }
 
 
@@ -148,7 +153,7 @@ header{
 	}
 }
 
-#rewievs{
+#rewievs {
 	width: 90%;
 	color: blue;
 }
@@ -157,10 +162,11 @@ header{
 ******* Calendar ******
 ========================*/
 
-.calendarWrapper{
+.calendarWrapper {
 	grid-column: 1/3;
 }
-.calendar{
+
+.calendar {
 	display: grid;
 	background-color: #febb02;
 	color: blue;
@@ -172,14 +178,14 @@ header{
 	margin: auto;
 }
 
-.item{
+.item {
 	display: grid;
 	justify-content: center;
 	align-content: center;
 	justify-self: center;
 }
 
-.button{
+.button {
 	display: grid;
 	grid-column: 1/3;
 	justify-self: center;
@@ -191,7 +197,7 @@ header{
 
 }
 
-.button:hover{
+.button:hover {
 	color: white;
 	top: 20px;
 	box-shadow: 5px 5px 0 #3c354a;
@@ -204,39 +210,68 @@ header{
 	}
 }
 
-.out, .out_2, .out_3{
+.out,
+.out_2,
+.out_3 {
 	color: #000000;
 }
 
 /* Делаем активный весь input[date], отклик не только по иконке */
-.start_date, .end_date {
-   position: relative;
-   display: inline-block;
+.start_date,
+.end_date {
+	position: relative;
+	display: inline-block;
 }
+
 input::-webkit-calendar-picker-indicator {
-   opacity: 0;
-   position: absolute;
-   display: block;
-   left: 0;
-   top: 0;
-   width: 100%;
-   padding-right: 0;
-   padding-left: 0;
-   margin: 0;
+	opacity: 0;
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0;
+	margin: 0;
 }
+
 /* ______________________________________________________________ */
-.footer{
+.footer {
 	grid-column: 1/3;
 	color: orange;
 	background-color: #383838;
 	border-radius: 5px;
 }
 
-.phone a{
+.phone a {
 	color: rgb(198, 192, 204);
 	text-decoration: none;
 }
 
-.telegram{
+.socialNet {
 	width: 1.5em;
+	padding: 0 10px;
+}
+
+.mapsDescription {
+	grid-column: 1/3;
+	font-size: 1.5em;
+	margin-top: 2em;
+}
+
+.maps {
+	display: flex;
+	grid-column: 1/3;
+	justify-content: center;
+	background-color: blue;
+	padding: 20px 0;
+	margin-bottom: 2em;
+	font-size: 1.2em;
+
+}
+
+.maps .socialNet {
+	/* display: flex; */
+	color: #febb02;
+
 }

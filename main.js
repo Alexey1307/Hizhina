@@ -72,3 +72,11 @@ function contactClick() {
 	contactElement.scrollIntoView({ block: "center", behavior: "smooth" });
 }
 btnContact.addEventListener('click', contactClick);
+
+// maps
+let btnMaps = document.querySelector('.buttonMaps');
+let mapsElement = document.querySelector(".mapsDescription");
+function mapsClick() {
+	mapsElement.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+btnMaps.addEventListener('click', mapsClick);
