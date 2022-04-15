@@ -32,10 +32,6 @@ document.querySelector('.button').addEventListener('click', function () {
 const swiper = new Swiper('.swiper', {
 	loop: true,
 
-	pagination: {
-		el: '.swiper-pagination',
-	},
-
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
@@ -65,6 +61,14 @@ let roomsElement = document.querySelector(".roomsDescription");
 	}
 btnRooms.addEventListener('click', roomsClick);
 
+// maps
+let btnMaps = document.querySelector('.buttonMaps');
+let mapsElement = document.querySelector(".mapsDescription");
+function mapsClick() {
+	mapsElement.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+btnMaps.addEventListener('click', mapsClick);
+
 // contacts
 let btnContact = document.querySelector('.buttonContact');
 let contactElement = document.querySelector(".footer");
@@ -73,10 +77,3 @@ function contactClick() {
 }
 btnContact.addEventListener('click', contactClick);
 
-// maps
-let btnMaps = document.querySelector('.buttonMaps');
-let mapsElement = document.querySelector(".mapsDescription");
-function mapsClick() {
-	mapsElement.scrollIntoView({ block: "center", behavior: "smooth" });
-}
-btnMaps.addEventListener('click', mapsClick);
