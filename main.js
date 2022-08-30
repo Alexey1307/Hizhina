@@ -33,7 +33,7 @@ btnMaps.addEventListener('click', mapsClick);
 
 // contacts
 let btnContact = document.querySelector('.buttonContact');
-let contactElement = document.querySelector(".footer");
+let contactElement = document.querySelector(".socialNet");
 function contactClick() {
 	contactElement.scrollIntoView({ block: "center", behavior: "smooth" });
 }
